@@ -1,0 +1,19 @@
+<head>
+    <title>SwapTW</title>
+<style>
+   body {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-60%);
+    font-family: "Arial,Helvetica,sans-serif"
+   }
+</style><body><center>
+<h1 id="swaptw">SwapTW</h1>
+<p>A bookmarklet that replaces the normal Scratch 3 project player with TurboWarp on project pages so you can get better performance without having to open another tab.</p>
+<p>Get started by dragging this bookmarklet to your bookmarks bar:</p>
+<code><a href="javascript:(function()%7Blet%20url%20%3D%20window.location.href%3B%0Alet%20projectID%20%3D%20%22no%20one%20here%20by%20that%20name!%22%3B%0Aleaveonlynumbers()%3B%20%0Alet%20embedcode%20%3D%20'%3Ciframe%20src%3D%22https%3A%2F%2Fstaging.turbowarp.org%2F'%2BprojectID%2B'%2Fembed%22%20width%3D%22482%22%20height%3D%22406%22%20allowtransparency%3D%22true%22%20frameborder%3D%220%22%20scrolling%3D%22no%22%20allowfullscreen%3E%3C%2Fiframe%3E'%0AreplaceContentInContainer(%22guiPlayer%22%2C%20embedcode)%3B%0Afunction%20leaveonlynumbers()%20%7B%0A%20%20%20%20let%20regex%20%3D%20%2F%5CD%2Fg%3B%0A%20%20%20%20projectID%20%3D%20url.replace(regex%2C%20%22%22)%3B%0A%7D%0Afunction%20replaceContentInContainer(matchClass%2C%20content)%20%7B%0A%20%20%20%20var%20elems%20%3D%20document.getElementsByTagName('*')%2C%20i%3B%0A%20%20%20%20for%20(i%20in%20elems)%20%7B%0A%20%20%20%20%20%20%20%20if(('%20'%20%2B%20elems%5Bi%5D.className%20%2B%20'%20').indexOf('%20'%20%2B%20matchClass%20%2B%20'%20')%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3E%20-1)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20elems%5Bi%5D.innerHTML%20%3D%20content%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%7D)()%3B">SwapTW</a></code>
+<p>and click the bookmarklet on any project page to swap out the players.</p>
+<hr />
+<p>Created by <a href="https://theglasspenguin.us.to">TheGlassPenguin</a>. <a href="https://github.com/TheGlassPenguin/SwapTW">This project is open source!</a></p>
+</center></body></head>
